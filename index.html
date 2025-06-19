@@ -359,25 +359,6 @@
             opacity: 0;
         }   
 
-        @keyframes panZoom {
-            0% {
-               background-position: 50% 50%;
-               background-size: 110%;
-            }
-            100% {
-                background-position: 100% 50%;
-                background-size: 110%;
-            }
-        }
-
-        @media (max-width: 768px) {
-          .hero {
-            animation: none !important;
-            background-position: center center;
-            background-size: cover;
-          }
-        }
-
         /* Features Section */
         .features {
             padding: 70px 0;
@@ -1006,6 +987,17 @@
             }
         }
 
+            @keyframes panZoom {
+            0% {
+               background-position: 50% 50%;
+               background-size: 110%;
+            }
+            100% {
+                background-position: 100% 50%;
+                background-size: 110%;
+            }
+        }
+        
         /* Responsive styles */
         @media (max-width: 1200px) {
             .hero-title {
@@ -1097,20 +1089,37 @@
         }
 
         @media (max-width: 576px) {
+            .hero {
+                padding-top: 60px;
+                min-height: 80vh;
+                background-size: cover;
+            }
+
+            .hero-content {
+                padding: 20px 15px;
+            }
+
             .hero-title {
-                font-size: 2.5rem;
+                font-size: 1.8rem;
+                line-height: 1.3;
+                margin-bottom: 15px;
             }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-            
+
             .hero-subtitle {
-                font-size: 1.1rem;
+               font-size: 1rem;
+               margin-bottom: 25px;
+               line-height: 1.5;
             }
-            
-            .about-stats {
-                grid-template-columns: 1fr;
+
+            .hero-buttons {
+               flex-direction: column;
+               gap: 10px;
+               margin-top: 20px;
+            }
+
+            .btn {
+               padding: 10px 20px;
+               font-size: 0.95rem;
             }
              .floating-whatsapp {
                 position: fixed;
@@ -1133,6 +1142,14 @@
             .floating-whatsapp:hover {
                 transform: scale(1.1)
         }
+        
+           @media (max-width: 768px) {
+          .hero {
+            animation: none !important;
+            background-position: center center;
+            background-size: cover;
+          }
+        }    
     </style>
 </head>
     <a href="https://wa.me/254722613844?text=Hi%20Verben%20Investments%2C%20I%E2%80%99m%20interested%20in%20your%20products." target="_blank" class="floating-whatsapp"><i class="fab fa-whatsapp"></i></a> 
