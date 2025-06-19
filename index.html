@@ -310,6 +310,8 @@
             text-align: center;
             position: relative;
             overflow: hidden;
+            background-size: 110%;
+            animation: panZoom 5s ease-in-out infinite alternate;
         }
 
         .hero::before {
@@ -355,6 +357,17 @@
             margin-top: 40px;
             animation: fadeInUp 1s ease-out 0.4s forwards;
             opacity: 0;
+        }   
+
+        @keyframes panZoom {
+            0% {
+               background-position: 50% 50%;
+               background-size: 110%;
+            }
+            100% {
+                background-position: 100% 50%;
+                background-size: 110%;
+            }
         }
 
         /* Features Section */
